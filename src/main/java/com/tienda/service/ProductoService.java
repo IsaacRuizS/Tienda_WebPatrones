@@ -30,6 +30,10 @@ public interface ProductoService    {
     
     //Lista de productos utilizando consultas con SQL Nativo
     public List<Producto> metodoNativo(double precioInf, double precioSup);
+    
+    //Practica 4
+    public List<Producto> findByDescripcionContaining(String descripcion);
+
 
     
 }

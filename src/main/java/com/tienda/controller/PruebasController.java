@@ -81,4 +81,13 @@ public class PruebasController {
         model.addAttribute("precioSup", precioSup);
         return "/pruebas/listado2";
     }
+    
+    @PostMapping("/practica4")
+    public String consultaQuery3(@RequestParam(value = "descripcion") String descripcion, Model model) {
+        var productos = productoService.findByDescripcionContaining(descripcion);
+        model.addAttribute("productos", productos);
+        model.addAttribute("totalProductos", productos.size());
+        model.addAttribute("descripcion", descripcion);
+        return "/pruebas/listado2";
+    }
 }

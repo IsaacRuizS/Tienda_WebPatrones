@@ -312,6 +312,34 @@
                 </div>  
             </div>
         </section> 
+        
+        <!--Practica 4 -->
+        <section th:fragment="filtroDesc" class="bg-light">
+            <div class="row py-2">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <form method="POST" th:action="@{/pruebas/practica4}" 
+                          class="was-validated">
+                        <div class="card">                            
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label for="descripcion">[[#{producto.descripcion}]]</label>
+                                    <input type="text" class="form-control" 
+                                           th:value="${descripcion}"
+                                           th:name="descripcion" required="true"/>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-check"></i> [[#{pruebas.buscar}]]
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>   
+                <div class="col-md-4"></div>
+            </div>
+        </section> 
 
     </body>
 </html>
